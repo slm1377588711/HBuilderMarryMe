@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>登录页面</title>
+		<!--引入外部样式-->
+		<link rel="stylesheet" href="css/houtailogin.css" />
+	</head>
+	<body class="login_body">
+		<div class="login_container">
+			<div class="login_title">
+				<div class="login_title_center">
+					<img src="img/marrymelogo.png" alt="" />
+					<span>后台登录管理</span>
+				</div>
+			</div>
+			<div class="login_content">
+				<div class="login_form">
+					<form>
+						<p class="form-group">
+							<label for="username">用户名</label>
+							<input id="username" type="text" name="username" />
+						</p>
+						<p class="form-group">
+							<label for="password">密　码</label>
+							<input id="password" type="password" name="username" />
+						</p>
+						<p class="form-group">
+							<label for="type">类　型</label>
+							<select id="type" name="type">
+								<option value="1">管理员</option>
+								<option value="0">学员</option>
+							</select>
+							<input class="code" type="text" name="code" maxlength="4"/>
+							<img class="code_img" src="img/code.png"/>
+						</p>
+						<p class="form-group">
+							<input class="login_btn" type="submit" value="登录"/>
+							<input class="reg_btn" type="button" value="注册"/>
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

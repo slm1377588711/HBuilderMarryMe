@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>内容展示</title>
+<link rel="stylesheet" href="css/inner.css" />
+</head>
+
+<body>
+<div class="wrapinner">
+	<div class="box-slider" id="dowebok">
+		<a href="javascript:" class="box-slider-seta-left"></a>
+		<div class="box-slider-content">
+			<div class="box-slider-move">
+				<div class="item first"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item"><span></span></div>
+				<div class="item last-item"><span></span></div>
+			</div>
+		</div>
+		<a href="javascript:" class="box-slider-seta-right"></a>
+	</div>
+</div>
+ 
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/jquery-boxSlider.js"></script>
+<script>
+$(function() {
+	$("#dowebok").boxSlider({
+		orientation: 'horizontal',
+		speed: 3
+	});
+});
+</script>
+</body>
+</html>

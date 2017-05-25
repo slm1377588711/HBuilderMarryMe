@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="http://www.jq22.com/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src='js/style.js'></script>
+ 	 <script src="js/swiper.min.js"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+	<!--导航-->
+	<div id="load_nav"></div>
+    <!-- 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide" style="background: url(img/lun1.jpg);">
+            	<div class="inner" style="width: 100%;height: 100%;background: rgba(52,52,52,0.6);text-align: center; line-height: 768px;">
+            		
+            	</div>
+            </div>
+            <div class="swiper-slide" style="background: url(img/lun4.jpg);">
+            	<div class="inner" style="width: 100%;height: 100%;background: rgba(52,52,52,0.6);text-align: center; line-height: 768px;">
+            		
+            	</div>
+            	
+            </div>
+            <div class="swiper-slide">
+            	<div class="inner" style="width: 100%;height: 100%;background: rgba(52,52,52,0.6);text-align: center; line-height: 768px;">
+            		
+            	</div>
+            </div>
+            <div class="swiper-slide">
+            	<div class="inner" style="width: 100%;height: 100%;background: rgba(52,52,52,0.6);text-align: center; line-height: 768px;">
+            		
+            	</div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+	<div class="bottom">
+		<span>版权所有&copy;2017-06-10 & 支持浏览器 chrom 分辨率 1366x768</span>
+	</div>
+  
+    <script>
+    
+ 
+			$(document).ready(function() {
+   			 	$(".inner").load("inner1.html");
+			});
+			
+    
+    
+    
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        direction: 'vertical',
+        slidesPerView: 1,
+        paginationClickable: true,
+        spaceBetween: 30,
+        mousewheelControl: true 
+    });
+    </script>
+</body> 
+</html>

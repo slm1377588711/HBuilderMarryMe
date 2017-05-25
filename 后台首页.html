@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--网页编码 -->
+		<meta charset="utf-8" />
+		<meta name="keyword" content="婚纱,婚庆,结婚" />
+		<meta name="description" content="Marry婚庆公司" />
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<title>后台首页</title>
+		<link rel="stylesheet" href="css/houtaiIndex.css" />
+		<link rel="stylesheet" href="font/font-awesome-4.7.0/css/font-awesome.min.css" />
+		<script type="text/javascript" src="js/jquery.js" ></script>
+		<script type="text/javascript" src="js/houtaiindex.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	</head>
+	<body bgcolor="LavenderBlush">
+		<!--系统顶部导航 start-->
+		<div class="marryme-header">
+			<!--这的a标签路径以后改为前台首页-->
+			<h1 class="logo"><a href="login.html">MarryMe</a></h1>
+			<div class="title">
+				<span id="title-text">后台首页</span>
+				<i id="icon"></i>
+				<span class="tips"></span>
+			</div>
+			<div id="login-info" class="login-info">
+				<a href="#"><i class="fa fa-user-circle-o"></i>&nbsp;宋丽妹&nbsp;<i id="carset" class="fa fa-caret-down"></i> </a>
+				<div id="panel" class="panel" >
+					<span class="sanjiao"></span>
+					<ul>
+						<li><a href="#">个人信息</a></li>
+						<li><a href="#">修改密码</a></li>
+						<li class="line"></li>
+						<li><a href="#">退出</a></li>
+					</ul>
+				</div>
+			</div>
+			<ul class="list-item">
+				<li><a href="javascript:;">用户管理</a></li>
+				<li><a href="javascript:;">商品管理</a></li>
+			</ul>
+		</div>
+		<!--系统顶部导航 end-->
+		<!--左边菜单栏start-->
+		<div class="marryme-left">
+			<h3 class="title">
+				<img src="img/touxiang.jpg" alt="头像" />
+				<span>   宋丽妹</span>
+			</h3>
+			<ul id="nav" class="nav">
+				<li class="nav-item">
+					<span><i class="fa fa-hand-o-right"></i> 用户管理</span>
+					<ul class="nav-item-list">
+						<li id="Userlist" data-url="user/Userlist.html"><a href="#/user/Userlist">用户列表</a></li>
+						<li id="addUser" data-url="user/addUser.html"><a href="#/user/addUser">添加用户</a></li>
+						<li id="updateUser" data-url="user/updateUser.html"><a href="#/user/updateUser">修改用户</a></li>
+						<li id="selectUser" data-url="user/selectUser.html"><a href="#/user/selectUser">查询用户</a></li>
+						<li id="delUser" data-url="user/delUser.html"><a href="#/user/delUser">删除用户</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<span><i class="fa fa-hand-o-right"></i> 商品管理</span>
+					<ul class="nav-item-list">
+						<li id="Marrylist" data-url="marry/Marrylist.html"><a href="#/marry/Marrylist">商品列表</a></li>
+						<li id="addMarry" data-url="marry/addMarry.html"><a href="#/marry/addMarry">添加商品</a></li>
+						<li id="updateMarry" data-url="marry/updateMarry.html"><a href="#/marry/updateMarry">修改商品</a></li>
+						<li id="selectMarry" data-url="marry/selectMarry.html"><a href="#/marry/selectMarry">查询商品</a></li>
+						<li id="delMarry" data-url="marry/delMarry.html"><a href="#/marry/delMarry">删除商品</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--左边菜单栏end-->
+		<!--右侧显示区包含两大部分：顶部包含内容；底部页脚，顶部使用js设置最小宽度和最小高度，内容区自己填充-->
+		<div class="marryme-right">
+			<!--右侧顶部 设置最小高度和最小宽度-->
+			<div id="marryme-right-top" class="marryme-right-top">
+				<!--右侧顶部的内容区-->
+				<div id="marryme-right-content" class="marryme-right-content">
+				</div>
+			</div>	
+			<!--页脚-->
+			<div class="marryme-right-bottom">
+				<span>@2016 Baidu | 京ICP证030173号</span>
+			</div>
+		</div>
+		</div>
+		<script>
+			jQuery.noConflict(); //将$符所有权剔除
+			var $$ = jQuery;   
+			marryme.init();   //调用houtaiindex.js封装的top区，left区，right区的事件 
+			var url = window.location.href;  //获取当前url信息
+			var target = url.substring(url.indexOf("#")); //indexOf返回第一次出现#的位置  subString截取#出现的位置到最后的字符串
+			if(target == "#/user/addUser"){
+				//触发添加用户的单击事件
+				$().getId("addUser").elements[0].onclick();
+			}else if(target == "#/user/Userlist"){
+				//触发用户列表的单击事件
+				$().getId("Userlist").elements[0].onclick();
+			}else if(target == "#/user/updateUser"){
+				//触发修改用户的单击事件
+				$().getId("updateUser").elements[0].onclick();
+			}else if(target == "#/user/selectUser"){
+				//触发查询用户的单击事件
+				$().getId("selectUser").elements[0].onclick();
+			}else if(target == "#/user/delUser"){
+				//触发删除用户的单击事件
+				$().getId("delUser").elements[0].onclick();
+			}else if(target == "#/marry/addMarry"){
+				//触发添加商品的单击事件
+				$().getId("addMarry").elements[0].onclick();
+			}else if(target == "#/marry/Marrylist"){
+				//触发商品列表的单击事件
+				$().getId("Marrylist").elements[0].onclick();
+			}else if(target == "#/marry/updateMarry"){
+				//触发修改商品的单击事件
+				$().getId("updateMarry").elements[0].onclick();
+			}else if(target == "#/marry/delMarry"){
+				//触发删除商品的单击事件
+				$().getId("delMarry").elements[0].onclick();
+			}else if(target == "#/marry/selectMarry"){
+				//触发查询商品的单击事件
+				$().getId("selectMarry").elements[0].onclick();
+			}else if(url.indexOf("#")==-1){
+				$$("#marryme-right-content").load("page/index/success.html");
+			}else{
+				$$("#marryme-right-content").load("page/error/404.html");
+			}
+		</script>
+	</body>
+</html>

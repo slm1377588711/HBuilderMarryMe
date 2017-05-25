@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		/*最大容器*/
+		.nav-list{
+			position: relative;
+			width: 300px;
+		}
+		/*小导航去除默认样式*/
+		.nav-list ul {
+				list-style: none;
+			}
+			/*默认选中第一个*/
+		.nav-list ul li {
+				float: left;
+				width:100px;
+				height: 30px;
+				line-height: 30px;
+				font-size: 14px;
+				border-top: 2px green solid;
+				color: green;
+				text-align: center;
+			}
+			/*单独修改第二个*/
+		.nav-list ul li:last-child{
+				border-top:0px;
+				color: blue;
+			}
+			/*包含内容的div*/
+		.nav-list .list-itms{
+				position: absolute;
+				top:20px;
+				left:0px;
+				width: 500px;
+				height: 320px;
+				border: 0px solid #000000;
+			}
+			.img2{
+				display: none;
+			}
+		</style>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js" ></script>
+		
+	</head>
+
+	<body>
+		<div class="nav-list">
+			<ul>
+			<li>
+				登录
+			</li>
+			<li>
+				注册
+			</li>
+		</ul>
+		<div class="list-itms">
+			<div class="img1" style="width: 490px; height: 290px; text-align: left;">
+			</div>
+			
+		</div>
+		</div>
+		
+		
+		<script>
+		$(".img1").load("login.html");
+		$(".nav-list ul li:first-child").click(function(){ 
+			/*$(".img1").load("login.html");*/
+			/*第二个li的样式改为当前活动状态*/	
+					$(this).css({
+						"border-top":"2px green solid",
+						color:"green"
+					});
+					/*第一个li改成非活动*/
+					$(".nav-list ul li:first-child").css({
+						"border-top":"0px",
+						color:"blue"
+					});
+		});
+		$(".nav-list ul li:last-child").click(function(){ 
+			$(".img1").load("zhuce.html");
+			$(".nav-list ul li:last-child").css({
+						"border-top":"0px",
+						color:"blue"
+					});
+					/*第一个li的样式改为当前活动状态*/	
+					$(this).css({
+						"border-top":"2px green solid",
+						color:"green"
+					});
+		});
+			
+			/*$(".img2").load("zhuce.html");*/
+		</script>
+	</body>
+
+</html>
